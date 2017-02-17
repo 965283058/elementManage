@@ -1,10 +1,7 @@
-// 微信相关
-export const SUBSCRIBE = 'wechat/is_subscribe' // get
+
 
 // 账号相关
-export const REGISTER = 'account/customer/regist' // post
-export const LOGIN = 'account/customer/login' // post
-export const RESET_PASSWORD = 'account/customer/forget_pw'
+export const LOGIN = '/manage/user/login' // post
 
 export const STAFF_LOGIN = 'account/staff/login' // post
 export const STAFF_RESET_PASSWORD = 'account/staff/forget_pw'

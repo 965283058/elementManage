@@ -8,8 +8,7 @@ export const post = function (url, params, opts = {}, json = true) {
         return Promise.reject({message: '您的网络不可用'})
     }
     return Vue.http.post(url, params, opts).then(response => {
-
-        if (response.code !== 0) {
+        if (response.code !== 0&&response.code) {
             if (response.code === 1) {
                 return Promise.reject(response)
             } else if (response.code === 10) {
@@ -39,7 +38,7 @@ export const post = function (url, params, opts = {}, json = true) {
                 })
             }
         } else {
-            return Promise.resolve(response.data)
+            return Promise.resolve(JSON.parse(response.request.response))
         }
     }, response => {
         // 处理http状态码

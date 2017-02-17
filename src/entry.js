@@ -7,13 +7,13 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
 
 Vue.use(Http, {
-    root: '/hxd',
+    root: '',
     timeout: 15000,
     loading: (bool)=> {
-        Vue.loading(bool)
+
     },
     error: (msg)=> {
-        alert(msg)
+        Vue.alert(msg)
     }
 })
 

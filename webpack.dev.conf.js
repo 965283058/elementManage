@@ -73,8 +73,8 @@ module.exports = {
     server: {
         port: 8989,
         proxy: {
-            host: 'http://qa.houbank.com/',
-            match: /^\/hxd\//
+            host: 'http://127.0.0.1/',
+             match: /^\/manage\//
         }
     }
 }
